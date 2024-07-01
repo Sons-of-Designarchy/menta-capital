@@ -27,12 +27,18 @@ body {
   font-weight: 400;
 }
 
+h1 {
+  font-size: 5rem;
+  font-weight: 400;
+}
+
 button {
   background: var(--light-blue);
   border: none;
   border-radius: 5px;
 
   padding: 1rem 2rem;
+  width: fit-content;
 }
 
 header {
@@ -40,5 +46,17 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 25% 95%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  text-align: center;
+
   height: 80vh;
+}
+
+header h1 {
+  max-width: 70%;
 }
