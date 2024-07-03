@@ -20,6 +20,11 @@
 
   --text-color-white: rgba(255, 255, 255, 1);
   --text-color-blue: var(--main-blue);
+
+  --spacing-unit: 0.5rem;
+  --spacing-sm: calc(var(--spacing-unit) * 2);
+  --spacing-md: calc(var(--spacing-unit) * 3);
+  --spacing-lg: calc(var(--spacing-unit) * 4);
 }
 
 body {
@@ -30,6 +35,11 @@ body {
 h1 {
   font-size: 5rem;
   font-weight: 400;
+}
+
+a:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 button {
@@ -59,4 +69,28 @@ header {
 
 header h1 {
   max-width: 70%;
+}
+
+nav {
+  display: flex;
+  justify-content: right;
+
+  padding: var(--spacing-lg);
+
+  width: 100%;
+  box-sizing: border-box;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-sm);
+
+  align-self: end;
+
+  list-style-type: none;
+}
+
+nav li a {
+  text-transform: uppercase;
 }
