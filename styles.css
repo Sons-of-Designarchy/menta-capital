@@ -33,8 +33,21 @@ body {
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: 3rem;
   font-weight: 400;
+
+  @media only screen and (min-width: 64em) {
+    font-size: 4rem;
+  }
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+
+  @media only screen and (min-width: 64em) {
+    font-size: 2rem;
+  }
 }
 
 a:hover {
@@ -49,13 +62,20 @@ button {
 
   padding: 1rem 2rem;
   width: fit-content;
+
+  font-family: 'Aeonik';
+  font-size: 1rem;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 header {
   background: url('./assets/img/header-image.png');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 25% 95%;
+  background-position: 0 85%;
 
   display: flex;
   flex-direction: column;
@@ -64,18 +84,34 @@ header {
 
   text-align: center;
 
-  height: 80vh;
+  padding: var(--spacing-lg);
+
+  max-height: 60vh;
+  height: fit-content;
+
+  @media only screen and (min-width: 64em) {
+    min-height: 90vh;
+    background-position: 25% 95%;
+  }
 }
 
 header h1 {
-  max-width: 70%;
+  width: 100%;
+
+  @media only screen and (min-width: 48em) {
+    max-width: 70%;
+  }
+}
+
+header h3 {
+  @media only screen and (min-width: 48em) {
+    max-width: 50%;
+  }
 }
 
 nav {
   display: flex;
   justify-content: right;
-
-  padding: var(--spacing-lg);
 
   width: 100%;
   box-sizing: border-box;
@@ -93,4 +129,24 @@ nav ul {
 
 nav li a {
   text-transform: uppercase;
+}
+
+/* Small devices such as large phones (640px and up) */
+@media only screen and (min-width: 40em) {
+  ...;
+}
+
+/* Medium devices such as tablets (768px and up) */
+@media only screen and (min-width: 48em) {
+  ...;
+}
+
+/* Large devices such as laptops (1024px and up) */
+@media only screen and (min-width: 64em) {
+  ...;
+}
+
+/* Largest devices such as desktops (1280px and up) */
+@media only screen and (min-width: 80em) {
+  ...;
 }
