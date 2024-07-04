@@ -183,13 +183,19 @@ nav li a {
   margin: var(--spacing-sm) 0;
 }
 
+.section-wrapper {
+  padding: var(--spacing-md);
+
+  @media only screen and (min-width: 64em) {
+    padding: calc(var(--spacing-2xl) * 2) var(--spacing-xl);
+  }
+}
+
 .intro-wrapper {
   background-color: var(--main-blue);
-  padding: var(--spacing-md);
   min-height: fit-content;
 
   @media only screen and (min-width: 64em) {
-    padding-top: var(--spacing-3xl);
     min-height: 80vh;
   }
 }
@@ -207,7 +213,6 @@ nav li a {
     gap: var(--spacing-xl);
 
     padding: var(--spacing-xl);
-    padding-top: var(--spacing-xl);
 
     max-width: var(--max-width);
     grid-template-columns: repeat(2, 1fr);
@@ -235,11 +240,6 @@ nav li a {
 
 .what-we-do-wrapper {
   background: var(--light-blue);
-  padding: var(--spacing-md);
-
-  @media only screen and (min-width: 64em) {
-    padding: calc(var(--spacing-2xl) * 2) var(--spacing-xl);
-  }
 }
 
 .what-we-do {
@@ -298,6 +298,35 @@ nav li a {
 
 .card:nth-child(2) ~ * {
   border-bottom: none;
+}
+
+.featured {
+  max-width: var(--max-width);
+
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+
+  align-items: center;
+}
+
+.featured img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.featured p {
+  max-width: 85ch;
+  font-size: 2rem;
+  line-height: normal;
+
+  @media only screen and (min-width: 64em) {
+    line-height: 3.8rem;
+    font-size: 2.75rem;
+    text-align: center;
+  }
 }
 
 /* Small devices such as large phones (640px and up) */
