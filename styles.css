@@ -34,6 +34,10 @@
   --max-width: 1250px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Aeonik';
   font-weight: 400;
@@ -81,6 +85,10 @@ p {
   @media only screen and (min-width: 64em) {
     line-height: 2.5rem;
   }
+}
+
+a {
+  text-decoration: none;
 }
 
 a:hover {
@@ -171,6 +179,7 @@ nav ul {
 
 nav li a {
   text-transform: uppercase;
+  color: var(--text-color-blue);
 }
 
 .arrow-link {
