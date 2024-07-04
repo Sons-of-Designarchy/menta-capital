@@ -159,22 +159,31 @@ header img {
 
 nav {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+  gap: var(--spacing-md);
+  align-items: center;
 
   width: 100%;
   box-sizing: border-box;
 
-  padding: var(--spacing-md) var(--spacing-lg);
+  @media only screen and (min-width: 48em) {
+    flex-direction: row;
+    padding: var(--spacing-md) var(--spacing-lg);
+  }
 }
 
 nav ul {
   display: flex;
   flex-direction: row;
-  gap: var(--spacing-xl);
-
-  align-self: end;
+  gap: var(--spacing-md);
 
   list-style-type: none;
+
+  @media only screen and (min-width: 48em) {
+    align-self: end;
+    gap: var(--spacing-xl);
+  }
 }
 
 nav li a {
