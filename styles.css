@@ -185,6 +185,7 @@ nav li a {
 .arrow-link {
   display: flex;
   width: fit-content;
+  justify-content: space-between;
   border-bottom: solid 1px var(--text-color-white);
 
   width: 100%;
@@ -197,6 +198,10 @@ nav li a {
   font-size: 1rem;
 
   margin: var(--spacing-sm) 0;
+}
+
+.arrow-link:hover {
+  text-decoration: none;
 }
 
 .section-wrapper {
