@@ -25,6 +25,11 @@
   --spacing-sm: calc(var(--spacing-unit) * 2);
   --spacing-md: calc(var(--spacing-unit) * 3);
   --spacing-lg: calc(var(--spacing-unit) * 4);
+  --spacing-xl: calc(var(--spacing-unit) * 5);
+  --spacing-2xl: calc(var(--spacing-unit) * 6);
+  --spacing-3xl: calc(var(--spacing-unit) * 8);
+
+  --max-width: 1250px;
 }
 
 body {
@@ -32,10 +37,23 @@ body {
   font-weight: 400;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 400;
+}
+
 h1 {
   font-size: 3rem;
-  font-weight: 400;
 
+  @media only screen and (min-width: 64em) {
+    font-size: 5rem;
+  }
+}
+
+h2 {
+  font-size: 2rem;
   @media only screen and (min-width: 64em) {
     font-size: 4rem;
   }
@@ -43,7 +61,6 @@ h1 {
 
 h3 {
   font-size: 1.5rem;
-  font-weight: 400;
 
   @media only screen and (min-width: 64em) {
     font-size: 2rem;
@@ -97,8 +114,10 @@ header {
 
 header h1 {
   width: 100%;
+  padding-top: 0;
 
   @media only screen and (min-width: 48em) {
+    padding-top: var(--spacing-lg);
     max-width: 70%;
   }
 }
@@ -129,6 +148,77 @@ nav ul {
 
 nav li a {
   text-transform: uppercase;
+}
+
+.arrow-link {
+  display: flex;
+  width: fit-content;
+  border-bottom: solid 1px var(--text-color-white);
+
+  width: 100%;
+}
+
+.arrow-link p {
+  font-family: 'TartuffoTrial';
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1rem;
+
+  margin: var(--spacing-sm) 0;
+}
+
+.intro-wrapper {
+  background-color: var(--main-blue);
+  padding: var(--spacing-md);
+  min-height: fit-content;
+
+  @media only screen and (min-width: 64em) {
+    padding-top: var(--spacing-3xl);
+    min-height: 80vh;
+  }
+}
+
+.intro {
+  display: grid;
+
+  gap: var(--spacing-lg);
+  justify-content: space-between;
+  grid-template-columns: 100%;
+
+  color: var(--text-color-white);
+
+  @media only screen and (min-width: 48em) {
+    gap: var(--spacing-xl);
+
+    padding: var(--spacing-xl);
+    padding-top: var(--spacing-xl);
+
+    max-width: var(--max-width);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media only screen and (min-width: 64em) {
+    margin: auto;
+    gap: calc(var(--spacing-3xl) * 3);
+  }
+}
+
+.intro-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.intro-description {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  max-width: 60ch;
+
+  @media only screen and (min-width: 64em) {
+    font-size: 1.65rem;
+  }
 }
 
 /* Small devices such as large phones (640px and up) */
