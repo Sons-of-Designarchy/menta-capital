@@ -93,7 +93,7 @@ button {
   border: none;
   border-radius: 5px;
 
-  padding: 1rem 2rem;
+  padding: 1.25rem 2rem;
   width: fit-content;
 
   font-family: 'Aeonik';
@@ -125,6 +125,7 @@ header {
   @media only screen and (min-width: 64em) {
     min-height: 90vh;
     background-position: 25% 95%;
+    padding-top: 0;
   }
 }
 
@@ -144,18 +145,24 @@ header h3 {
   }
 }
 
+header img {
+  width: 10rem;
+}
+
 nav {
   display: flex;
-  justify-content: right;
+  justify-content: space-between;
 
   width: 100%;
   box-sizing: border-box;
+
+  padding: var(--spacing-md) var(--spacing-lg);
 }
 
 nav ul {
   display: flex;
   flex-direction: row;
-  gap: var(--spacing-sm);
+  gap: var(--spacing-xl);
 
   align-self: end;
 
