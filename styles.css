@@ -89,6 +89,7 @@ p {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 a:hover {
@@ -96,7 +97,8 @@ a:hover {
   cursor: pointer;
 }
 
-button {
+button,
+.button-link {
   background: var(--light-blue);
   border: none;
   border-radius: 5px;
@@ -106,10 +108,24 @@ button {
 
   font-family: 'Aeonik';
   font-size: 1rem;
+
+  text-decoration: none;
 }
 
-button:hover {
+button:hover,
+.button-link:hover {
   cursor: pointer;
+}
+
+button a,
+.button-link {
+  color: var(--text-color-blue);
+  position: relative;
+}
+
+button a:hover,
+.button-link:hover {
+  text-decoration: none;
 }
 
 header {
@@ -211,6 +227,7 @@ nav li a {
   font-size: 1rem;
 
   margin: var(--spacing-sm) 0;
+  color: var(--text-color-white);
 }
 
 .arrow-link:hover {
