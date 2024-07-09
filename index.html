@@ -9,6 +9,40 @@
 </head>
 
 <body>
+ <section class="modal">
+  <div class="modal-content">
+   <section class="modal-heading">
+    <h1 class="heading--secondary">Disclosure</h1>
+    <button class="modal-button" onclick="closeModal()">
+     <p>Close <span>X</span></p>
+    </button>
+   </section>
+   <div class="modal-text">
+    <p>Menta Capital, LLC (“Menta” or the “Firm”) is an SEC registered investment adviser with its principal place of
+     business in San Francisco, California. Menta’s website, <a href="http://www.mentacapital.com/"
+      target="_blank">http://www.mentacapital.com/</a>, is intended solely to provide
+     general information about the Firm, its services and its people. Menta does not intend to solicit or make its
+     services available to the general public. Under no circumstances should any information provided on this website be
+     considered as an offer soliciting the purchase or sale of any security or interest in any pooled investment vehicle
+     sponsored by Menta. Such offers or solicitations will be made separately and only by means of the offering
+     documents of the specific pooled investment vehicles and only to those who, among other requirements, meet certain
+     qualifications under federal securities laws. Such investors, defined as accredited investors and qualified
+     purchasers, are generally deemed sophisticated in financial matters such that they are capable of evaluating the
+     merits and risks of prospective investments.
+     Any opinions expressed in this website reflect Menta’s current views only. While taken from sources deemed to be
+     accurate, Menta makes no representations about the accuracy of the information or its appropriateness for a given
+     situation. The discussions and opinions expressed herein are not intended to provide investment, accounting, tax or
+     legal advice. The content of this website is presented on an “as is” basis with no warranties, express or implied,
+     of any kind with respect to the website.
+     Past results of Menta’s pooled investment vehicles or investment strategies are not necessarily indicative of
+     future results.
+     Registration with the SEC does not imply a certain level of skill or training. Additional information about Menta,
+     including the Firm’s Form ADV Part 2A Brochure, is available at the SEC’s website, <a
+      href="https://www.adviserinfo.sec.gov" target="_blank">https://www.adviserinfo.sec.gov</a>.
+    </p>
+   </div>
+  </div>
+ </section>
  <header>
   <nav>
    <img src="./assets/svg/logo.svg" alt="Menta Capital logo">
@@ -105,7 +139,7 @@
    <h2 class="heading--secondary">Contact us</h2>
    <section class="footer-reserved">
     <p>© 2024 Menta Capital. All rights reserved.</p>
-    <a href="disclosure.html">
+    <a onclick="openModal()">
      Disclosure
     </a>
    </section>
@@ -116,6 +150,7 @@
    </section>
   </div>
  </footer>
+ <script src="./scripts.js"></script>
 </body>
 
 </html>

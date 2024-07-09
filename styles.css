@@ -97,6 +97,11 @@ a:hover {
   cursor: pointer;
 }
 
+footer a,
+.modal a {
+  text-decoration: underline;
+}
+
 button,
 .button-link {
   background: var(--light-blue);
@@ -434,6 +439,82 @@ footer h2 {
 
 footer p {
   line-height: 1.5rem;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: var(--teal);
+  color: var(--text-color-white);
+
+  margin: auto;
+  padding: var(--spacing-md);
+  padding-bottom: var(--spacing-3xl);
+
+  width: 80%;
+  height: 70%;
+
+  overflow-y: scroll;
+
+  @media only screen and (min-width: 64em) {
+    width: 70%;
+    height: fit-content;
+    overflow-y: auto;
+  }
+}
+
+.modal-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  margin-bottom: var(--spacing-sm);
+}
+
+.modal-button {
+  background-color: transparent;
+  color: var(--text-color-white);
+  padding: 0.5rem;
+}
+
+.modal-button p {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+
+  font-family: 'TartuffoTrial';
+  text-transform: uppercase;
+  font-size: 1.05rem !important;
+}
+
+.modal-button p span {
+  border: solid 1px var(--text-color-white);
+  padding: 0.2rem 0.8rem;
+  border-radius: 1000px;
+}
+
+.modal-button:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content p {
+  line-height: 1.8rem;
+  font-size: 1.15rem;
+}
+
+.modal-text {
+  height: 100%;
 }
 
 /* Small devices such as large phones (640px and up) */
