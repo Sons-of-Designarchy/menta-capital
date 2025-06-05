@@ -148,7 +148,7 @@ header {
 
   padding: var(--spacing-lg);
 
-  min-height: 60vh;
+  min-height: 30vh;
   height: fit-content;
 
   @media only screen and (min-width: 48em) {
@@ -156,7 +156,7 @@ header {
   }
 
   @media only screen and (min-width: 64em) {
-    min-height: 100vh;
+    min-height: 50vh;
     background-position: 50% 80%;
     padding-top: 0;
   }
