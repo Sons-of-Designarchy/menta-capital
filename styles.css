@@ -134,7 +134,7 @@ button a:hover,
 }
 
 header {
-
+  background: var(--light-blue);
   display: flex;
   flex-direction: column;
   align-items: center;
